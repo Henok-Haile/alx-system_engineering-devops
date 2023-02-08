@@ -1,2 +1,2 @@
 #!/bin/bash
-0 string SHCOOL School data !:mimie School
+file -m school.mgc School SCHOOL
