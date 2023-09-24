@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# ssh clinet configuration using private key ~/.ssh/school
+# ssh clinet configuration refuses authentication using password
+
+PasswordAuthentication no
+IdentityFile ~/.ssh/school
