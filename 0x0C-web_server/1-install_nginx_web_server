@@ -2,7 +2,7 @@
 # A Bash script that configures a new Ubuntu machine to install nginx
 # on a web-server
 
-sudo apt-get update
+sudo apt-get update -y
 
 # the y command is yes for all prompts
 sudo apt-get install -y nginx
