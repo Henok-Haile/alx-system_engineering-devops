@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# A Bash script that configures a new Ubuntu machine to install nginx
+# on a web-server
+
+sudo apt-get update
+
+# the y command is yes for all prompts
+sudo apt-get install -y nginx
+
+# checking nginx status
+# sudo service nginx status or systemctl status nginx
+# enbled ufw usnig command sudo ufw enable
+# allow fire wall
+sudo utf allow 'Nginx HTTP'
+
+# the tee is for displaying the content after the command
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+# testing the nginx configuration
+sudo nginx -t
+
+# reloading nginx
+sudo service nginx reload
