@@ -11,13 +11,14 @@ sudo apt-get install -y nginx
 # sudo service nginx status or systemctl status nginx
 # enbled ufw usnig command sudo ufw enable
 # allow fire wall
-# sudo utf allow 'Nginx HTTP'
+sudo utf allow 'Nginx HTTP'
 
 # the tee is for displaying the content after the command
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # testing the nginx configuration
-# sudo nginx -t
+ sudo nginx -t
 
 # reloading nginx
+sudo service nginx reload
 sudo service nginx start
