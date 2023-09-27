@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# A Bash script containing commands to automatically configure a Ubuntu machine to
+# redirect the /redirect_me to another page
+
+sudo spt-get update -y
+sudo apt-get install -y nginx
+
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+string="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/Henok-Haile permanent;"
+
+sudo sed -i "s/server_name _;/$string/" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
