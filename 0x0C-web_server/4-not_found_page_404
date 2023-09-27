@@ -22,4 +22,4 @@ sudo sed -i "s/listen 80 default_server;/$string/" /etc/nginx/sites-enabled/defa
 
 # reload nginx after implmenting changes
 sudo service nginx reload
-sudo service nginx start
+sudo service nginx restart
