@@ -7,22 +7,14 @@ sudo apt-get -y update
 # Add Haproxy PPA
 sudo apt-get install -y --no-install-recommends software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-2.0
-app-get -y update
+sudo app-get -y update
 
 # Install Haproxy
-apt-get -y install haproxy=2.0.\*
+sudo apt-get -y install haproxy=2.0.\*
 
 # Configure Haproxy
-echo 'frontend balancer
-        bind *:80
-        default_backend servers
-
-backend servers
-        balance roundrobin
-        server 49828-web-01 100.25.164.254:80 check
-        server 49828-web-02 34.203.201.252:80 check
-' >> /etc/haproxy/haproxy.cfg
-
-echo 'ENABLED=1' >> /etc/default/haproxy
+sudo sed -i '12 i ENABLED=1' /etc/default/haproxy
+sudo sed -i '36 a \\nfrontend balancer\n\tbind   *:80\n\tdefault_backend servers' /etc/haproxy/haproxy.cfg
+sudo sed -i '40 a \\nbackend servers\n\tbalance roundrobin\n\tmode http\n\tserver 49828-web-01 100.25.164.254:80 check\n\tserver 49828-web-02 34.203.201.252:80 check' /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart
