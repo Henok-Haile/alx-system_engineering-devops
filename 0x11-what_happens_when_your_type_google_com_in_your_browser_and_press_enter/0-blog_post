@@ -1,17 +1,1 @@
-When you type https://www.google.com in a browser and press Enter, your computer embarks on a journey to bring you the information you seek.
-
-First, your computer sends a DNS request to a DNS server to resolve the domain name google.com to its IP address. The DNS server responds with the IP address of the Google web server.
-
-Once your computer has the IP address of the Google web server, it establishes a TCP/IP connection. TCP/IP is a suite of protocols that allows devices to communicate over a network. DNS servers translate requests for names into IP addresses, controlling which server an end user will reach when they type a domain name into their web browser.
-
-Before the connection is established, the firewall on your computer checks to make sure that it is allowed. A firewall is a network security device that monitors incoming and outgoing network traffic and decides whether to allow or block specific traffic based on a defined set of security rules. The firewall may block connections to certain websites or servers for security reasons.
-
-Once the connection is established, your computer uses HTTPS/SSL to encrypt the communication with the Google web server. HTTPS/SSL is a security protocol that protects data from being intercepted or modified during transmission.
-
-The Google web server then receives the request from your computer and generates a response. The response may include HTML, CSS, JavaScript, images, and other files that make up the Google website.
-
-If the Google website uses dynamic content, such as search results or personalized recommendations, an application server may be used to generate the content. The application server may then access a database to retrieve the data needed to generate the content.
-
-Once the response from the Google web server is complete, it is sent back to your computer. Your computer then decrypts the response and displays the Google website in your browser.
-
-This entire process happens in a matter of seconds, thanks to the complex network of infrastructure that supports the internet.
+https://medium.com/@henokhaile53/what-happens-when-you-type-https-www-google-com-in-your-browser-and-press-enter-b44b5ba9c0b7
