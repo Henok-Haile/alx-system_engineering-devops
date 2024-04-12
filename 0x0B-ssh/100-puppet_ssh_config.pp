@@ -1,16 +1,13 @@
+#!/usr/bin/env bash
 # Configuration client to connect without password using puppet
-include stdlib
 
-file_line {'Disable password authentication':
-ensure  => present,
-path    => '/etc/ssh/ssh_config',
-line    => 'PasswordAuthentication no',
-replace => true
-}
+file { '/etc/ssh/ssh_config':
+  ensure  => file,
+  content => "
 
-file_line {'Set SSH identity file to ~/.ssh/school':
-ensure  => present,
-path    => '/etc/ssh/ssh_config',
-line    => 'IdentityFile ~/.ssh/school',
-replace => true
+	# Global settings
+	Host *
+	PasswordAuthentication no
+	IdentityFile ~/.ssh/school
+	"
 }
