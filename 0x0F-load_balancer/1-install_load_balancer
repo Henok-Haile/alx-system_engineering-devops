@@ -3,7 +3,7 @@
 sudo apt-get -y update
 sudo apt-get -y install haproxy
 
-# configuring config file
+# configuring config.cfg file
 server_config=\
 "
 frontend henok-fronted
