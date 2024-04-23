@@ -2,4 +2,15 @@
 # A Bash script that accepts one argument
 # the script runs the whoami command under the user passed as an argument
 
-sudo -u "$1" whoami
+# Check if the number of arguments is not equalto one
+if [ "$#" -ne 1 ]
+then
+	echo "Usage: $0 <username>"
+	exit 1
+fi
+
+# Store the username provided as an argument
+username="$1"
+
+# Run the command under specified user
+sudo -u "$username" whoami
