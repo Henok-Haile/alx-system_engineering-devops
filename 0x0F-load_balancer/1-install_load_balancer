@@ -13,8 +13,8 @@ frontend henok-fronted
 
 backend henok-backend
         balance roundrobin
-        server 49828-web-01 54.198.54.29:80 check
-        server 49828-web-02 54.165.42.234:80 check
+        server 49828-web-01 100.25.47.158:80 check
+        server 49828-web-02 35.153.193.110:80 check
 "
 
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
