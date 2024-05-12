@@ -35,13 +35,13 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
 frontend henok-fronted
-        bind *:443 ssl crt /etc/haproxy/certs/domain.pem
-        redirect scheme https code 301 if !{ ssl_fc }
         bind *:80
+        bind *:443 ssl crt /etc/haproxy/certs/www.josier.tech.pem
+        redirect scheme https code 301 if !{ ssl_fc }
         mode http
         default_backend henok-backend
 
 backend henok-backend
         balance roundrobin
-        server 49828-web-01 54.198.54.29:80 check
-        server 49828-web-02 54.165.42.234:80 check
+        server 49828-web-01 100.25.47.158:80 check
+        server 49828-web-02 35.153.193.110:80 check
